@@ -1,0 +1,100 @@
+@import url(<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> )
+
+
+body
+{
+    margin:0;
+    padding:0;
+    font-family:"Poppins", sans-serif;
+}
+.card-complete
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+}
+.card-complete .card-front
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(48, 1, 1); */
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+}
+.card-complete:hover .card-front
+{
+    transform: rotateX(-180deg);
+}
+.card-complete .card-back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(21, 4, 99);
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 0.5s;
+}
+
+.card-complete:hover .card-back
+{
+    transform: rotateX(0deg);
+}
+
+.card-complete .card-back .card-details
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card-complete .card-back .card-details h2
+{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: white;
+}
+.card-complete .card-back .card-details span
+{
+    font-size: 15px;
+    color: whitesmoke;
+}
+.social-icons
+{
+    padding: 10px 0;
+}
+.social-icons a
+{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.social-icons a .fa
+{
+    line-height: 36px;
+}
+.social-icons a:hover
+{
+    background: red;
+}
